@@ -1,0 +1,13 @@
+matplotlib==3.8.4
+memory_profiler==0.61.0
+numpy==2.2.0
+pandas==2.2.3
+Pillow==11.0.0
+plotly==5.9.0
+scikeras==0.13.0
+scikit_learn==1.4.2
+scipy==1.11.4
+seaborn==0.13.2
+streamlit==1.40.1
+tensorflow==2.17.0
+tensorflow_intel==2.17.0
