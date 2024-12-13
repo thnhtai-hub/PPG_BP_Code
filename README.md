@@ -1,8 +1,18 @@
 # Hypertension Classification and Prediction Using Machine Learning and PPG Signal Analysis
 
+Author: The project is developed by **Nguyen Thanh Tai** as part of the Undergraduate Final Year Project at **Greenwich Vietnam FPT University**.
+
 This Final Project uses **machine learning** to classify and predict hypertension stages based on **Photoplethysmography (PPG)** signals and **physiological data**. The project implement various machine learning models, deep learning algorithm, and a user-friendly GUI for real-time predictions, data processing and model performance visualization.
 
 ---
+
+## Acknowledgments
+
+Special thanks to:
+
+- **Ms. Tran** and **Mr. Bao**, to whom I extend my deepest gratitude, are my esteemed lecturers who provided invaluable guidance, support, and insightful direction throughout the development of this project. Their expertise and encouragement have been instrumental in shaping the progress and outcomes of this work.
+- **Guilin People's Hospital** for providing essential data.
+- **World Health Organization (WHO)** for global hypertension statistics and insights.
 
 ## Table of Contents
 
@@ -11,7 +21,7 @@ This Final Project uses **machine learning** to classify and predict hypertensio
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Acknowledgments](#acknowledgments)
+- [Resources](#resources)
 
 ---
 
@@ -69,23 +79,59 @@ Hypertension is a leading cause of early mortality globally. This project aims t
 
 ## Installation
 
-1. **Clone the repository**: git clone https://github.com/thnhtai-hub/PPG_BP_CODE.git
-2. **Install packages in requirements.txt**: pip install -r requirements.txt
+1.  **Create a virtual environment**:
+
+- **Using `venv`**:
+  ```bash
+  python -m venv env
+  source env/bin/activate   # Linux/MacOS
+  env\Scripts\activate      # Windows
+  ```
+- **Using Anaconda**:
+  ```bash
+  conda create --name ppg_env python=3.8
+  conda activate ppg_env
+  ```
+
+2. **Clone the repository**:
+   ```bash
+   git clone https://github.com/thnhtai-hub/PPG_BP_CODE.git
+   cd PPG_BP_CODE
+   ```
+3. **Install packages in requirements.txt**:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
 How to use the GUI:
 
-1. Navigate to the app.py file: cd PPG_BP_Code\code\GUI
-2. Launch the app: streamlit run app.py
+1. Navigate to the app.py file:
+   ```bash
+   cd PPG_BP_Code/code/GUI
+   ```
+2. Launch the app:
+   ```bash
+   streamlit run app.py
+   ```
 3. Then you can upload the dataset, scroll through EDA pages for detailed insights on how the steps are done. To run models: Choose features and machine learning models from the sidebar to train or evaluate. (app page) For model performance, click "Compare Models" to observe predictions, accuracy scores, classification reports, and detailed performance metrics.
 
-## Acknowledgments
+## Resources
 
-The project is developed by **Nguyen Thanh Tai** as part of the Undergraduate Final Year Project at **Greenwich Vietnam FPT University**.
-
-Special thanks to:
-
-- **Ms. Tran** and **Mr. Bao**, to whom I extend my deepest gratitude, are my esteemed lecturers who provided invaluable guidance, support, and insightful direction throughout the development of this project. Their expertise and encouragement have been instrumental in shaping the progress and outcomes of this work.
-- **Guilin People's Hospital** for providing essential data.
-- **World Health Organization (WHO)** for global hypertension statistics and insights.
+| Path                                                         | Description                                  |
+| :----------------------------------------------------------- | :------------------------------------------- |
+| [PPG_BP_Code]()                                              | Main folder.                                 |
+| &boxv;&nbsp; &boxvr;&nbsp; [code]()                          | Main source code folder.                     |
+| &boxv;&nbsp; &boxvr;&nbsp; &boxvr;&nbsp; [data]()            | Contains code for data files.                |
+| &boxv;&nbsp; &boxvr;&nbsp; &boxvr;&nbsp; [GUI]()             | Code for the graphical user interface.       |
+| &boxv;&nbsp; &boxvr;&nbsp; [dataset]()                       | Folder for storing datasets.                 |
+| &boxv;&nbsp; &boxvr;&nbsp; &boxvr;&nbsp; [normalization]()   | Contains normalized dataset files.           |
+| &boxv;&nbsp; &boxvr;&nbsp; &boxvr;&nbsp; [raw]()             | Raw dataset files.                           |
+| &boxv;&nbsp; &boxvr;&nbsp; [images]()                        | Folder for storing generated images.         |
+| &boxv;&nbsp; &boxvr;&nbsp; &boxvr;&nbsp; [images_gui]()      | GUI-related image outputs.                   |
+| &boxv;&nbsp; &boxvr;&nbsp; &boxvr;&nbsp; [images_signal]()   | Signal-related plots.                        |
+| &boxv;&nbsp; &boxvr;&nbsp; &boxvr;&nbsp; [images_spectrum]() | Spectrum-related visualizations.             |
+| &boxv;&nbsp; &boxvr;&nbsp; [results]()                       | Stores results of best 219 SQI signal files. |
+| &boxv;&nbsp; &boxvr;&nbsp; [save_models]()                   | Folder for saved deep learning model.        |
