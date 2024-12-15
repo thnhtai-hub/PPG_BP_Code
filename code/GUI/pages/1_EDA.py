@@ -34,17 +34,23 @@ if load_data_button:
         2. Missing value
         3. All the Numerical Variables
         4. Categorical Variables Encoding
-        5. Visualization
+        5. Distribution and Multivariate Analysis
         """)
 
         # 1. Dataset Overview
         st.write("# 1. Dataset Overview")
         st.write("## 1.1 Data Types")
         st.write(df.dtypes)
-        st.write("-> Identify Numerical Data and Categorical Data")
+        st.write("- **Numerical Feature**: *int64, float64* ")
+        st.write("- **Categorical Feature**: *object*")
+        st.write('?: Help determine which features to train the model or encode')
+        st.write('-> Numerical data to predict hypertension')
+        st.write('-> Hypertension is label for multiclass model')
         st.write("## 1.2 Descriptive Statistics")
         st.write(df.describe().T)
-        st.write("Describe and Summarize data")
+        st.write("-> Wide age range: **21-86**")
+        st.write("-> Most patients from: **48-67**")
+        st.write("-> **This sample**, most patients are: *middle-age* to *elder*")
 
         # 2. Missing value
         # Check for missing values before handling
@@ -83,11 +89,12 @@ if load_data_button:
         plt.tight_layout()
         st.pyplot(fig)
 
+        st.write('-> **Delete from dataset**, since **many NaN** and **not main goal**.')
+
         # Numerical Features Overview
         numerical_features = [feature for feature in df.columns if df[feature].dtypes != object and feature not in ['Num.', 'subject_ID']]
         st.write("# 3. Numerical Features Overview")
         st.dataframe(df[numerical_features].head(), use_container_width=True)
-        st.write(f"Number of numerical features: {len(numerical_features)}")
 
         # Convert hypertension status
         def convert_hypertension_status(status):
@@ -125,15 +132,20 @@ if load_data_button:
         st.write("# 5. Visualization")
         st.write("## 5.1 Distribution by Hypertension")
         try:
-            st.image("../../images/images_gui/distribution_by_hypertension.png", caption="Distribution by Hypertension", use_container_width=True)
+            st.image("../../images/images_gui/EDA/distribution_by_hypertension.png", caption="Distribution by Hypertension", use_container_width=True)
+            st.write('- Wide **Age** range.')
+            st.write('- **Height, Weight, Heart Rate, BMI** changes are not significant.')
+            st.write('- **Systolic, Diastolic BP** has a clear increase between stages.')
         except FileNotFoundError:
-            st.warning("The file '../../images/images_gui/distribution_by_hypertension.png' was not found.")
+            st.warning("The file '../../images/images_gui/EDA/distribution_by_hypertension.png' was not found.")
 
         st.write("## 5.2 Multivariate Analysis")
         try:
-            st.image("../../images/images_gui/pair_plot_hue.png", caption="Pair Plot with Hue", use_container_width=True)
+            st.image("../../images/images_gui/EDA/pair_plot_hue.png", caption="Pair Plot with Hue", use_container_width=True)
+            st.write('→ For other features, it is not highly discriminative.')
+            st.write('→ As for **Systolic BP(mmHg)** and **Diastolic BP(mmHg)**, we can clearly see the distribution of different stages.')
         except FileNotFoundError:
-            st.warning("The file '../../images/images_gui/pair_plot_hue.png' was not found.")
+            st.warning("The file '../../images/images_gui/EDA/pair_plot_hue.png' was not found.")
 
     except FileNotFoundError:
         st.sidebar.error("The file 'PPG-BP dataset.xlsx' was not found. Please check the file path.")
