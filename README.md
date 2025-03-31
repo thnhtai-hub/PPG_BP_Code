@@ -89,7 +89,7 @@ Hypertension is a leading cause of early mortality globally. This project aims t
   ```
 - **Using Anaconda**:
   ```bash
-  conda create --name ppg_env python=3.8
+  conda create --name ppg_env python=3.11.7
   conda activate ppg_env
   ```
 
@@ -114,7 +114,7 @@ How to use the GUI:
    ```
 2. Launch the app:
    ```bash
-   streamlit run app.py
+   streamlit run Introduction.py
    ```
 3. Then you can upload the dataset, scroll through EDA pages for detailed insights on how the steps are done. To run models: Choose features and machine learning models from the sidebar to train or evaluate. (app page) For model performance, click "Compare Models" to observe predictions, accuracy scores, classification reports, and detailed performance metrics.
 
