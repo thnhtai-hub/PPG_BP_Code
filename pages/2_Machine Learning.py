@@ -28,7 +28,7 @@ with tab1:
     st.title("Hypertension Classification & Model Performance Application")
 
     # Đường dẫn đến file cố định
-    file_path = r"C:\PPG_BP_Code\dataset\raw\PPG-BP dataset - Processed.xlsx"
+    file_path = r"./dataset/raw/PPG-BP dataset.xlsx"
 
     # Load data
     st.sidebar.header("Load Dataset")

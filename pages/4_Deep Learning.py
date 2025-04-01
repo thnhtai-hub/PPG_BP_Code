@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import classification_report
 
 # Đường dẫn model và file dữ liệu
-model_path = r"C:\PPG_BP_Code\save_models\MLP_model.keras"
+model_path = r"./save_models/MLP_model.keras"
 PPG_file = r"./dataset/raw/PPG-BP dataset.xlsx"
 
 # Tiêu đề ứng dụng
