@@ -3,12 +3,12 @@ import os
 import pandas as pd
 
 # Đường dẫn các thư mục và file
-PPG_SQI_file = '../../results/PPG_SQI_Results.xlsx'
-folder_0_subject = '../../dataset/raw/0_subject'
-folder_0_subjectSQI = '../../results/0_subjectSQI'
-images_signal = '../../images/images_signal'
-images_spectrum = '../../images/images_spectrum'
-folder_normalized = '../../dataset/normalize/0_subjectSQI_normalized'
+PPG_SQI_file = './results/PPG_SQI_Results.xlsx'
+folder_0_subject = './dataset/raw/0_subject'
+folder_0_subjectSQI = './results/0_subjectSQI'
+images_signal = './images/images_signal'
+images_spectrum = './images/images_spectrum'
+folder_normalized = './dataset/normalize/0_subjectSQI_normalized'
 
 st.title("PPG Waveform Signal Processing")
 
@@ -129,7 +129,7 @@ show_folder_content(folder_0_subject, "0_subject")
 # Hiển thị file PPG_SQI_file
 st.subheader("PPG SQI Results")
 if os.path.exists(PPG_SQI_file):
-    st.image("../../images/images_gui/Signal/SQI_formula.png", caption="SQI Formula")
+    st.image("./images/images_gui/Signal/SQI_formula.png", caption="SQI Formula")
     df = pd.read_excel(PPG_SQI_file)
     st.dataframe(df, use_container_width=True)
 else:

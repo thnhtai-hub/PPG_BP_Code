@@ -15,7 +15,7 @@ load_data_button = st.sidebar.button("Load Data")  # Add button to sidebar
 if load_data_button:
     try:
         # Load and preprocess data
-        df = pd.read_excel('../../dataset/raw/PPG-BP dataset.xlsx')
+        df = pd.read_excel('./dataset/raw/PPG-BP dataset.xlsx')
 
         # Rename columns for better readability
         df = df.rename(columns={
@@ -132,20 +132,20 @@ if load_data_button:
         st.write("# 5. Visualization")
         st.write("## 5.1 Distribution by Hypertension")
         try:
-            st.image("../../images/images_gui/EDA/distribution_by_hypertension.png", caption="Distribution by Hypertension", use_container_width=True)
+            st.image("./images/images_gui/EDA/distribution_by_hypertension.png", caption="Distribution by Hypertension", use_container_width=True)
             st.write('- Wide **Age** range.')
             st.write('- **Height, Weight, Heart Rate, BMI** changes are not significant.')
             st.write('- **Systolic, Diastolic BP** has a clear increase between stages.')
         except FileNotFoundError:
-            st.warning("The file '../../images/images_gui/EDA/distribution_by_hypertension.png' was not found.")
+            st.warning("The file './images/images_gui/EDA/distribution_by_hypertension.png' was not found.")
 
         st.write("## 5.2 Multivariate Analysis")
         try:
-            st.image("../../images/images_gui/EDA/pair_plot_hue.png", caption="Pair Plot with Hue", use_container_width=True)
+            st.image("./images/images_gui/EDA/pair_plot_hue.png", caption="Pair Plot with Hue", use_container_width=True)
             st.write('→ For other features, it is not highly discriminative.')
             st.write('→ As for **Systolic BP(mmHg)** and **Diastolic BP(mmHg)**, we can clearly see the distribution of different stages.')
         except FileNotFoundError:
-            st.warning("The file '../../images/images_gui/EDA/pair_plot_hue.png' was not found.")
+            st.warning("The file './images/images_gui/EDA/pair_plot_hue.png' was not found.")
 
     except FileNotFoundError:
         st.sidebar.error("The file 'PPG-BP dataset.xlsx' was not found. Please check the file path.")

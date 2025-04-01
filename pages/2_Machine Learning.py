@@ -214,9 +214,9 @@ with tab1:
 
             # Compare models button for performance tracking   
             if st.button("Compare Models (Performance Metrics)"):
-                st.image("../../images/images_gui/ML/Accurac_compare.png", use_container_width=True)
-                st.image("../../images/images_gui/ML/Train_time.png", use_container_width=True)
-                st.image("../../images/images_gui/ML/Train_memory.png", use_container_width=True)
+                st.image("./images/images_gui/ML/Accurac_compare.png", use_container_width=True)
+                st.image("./images/images_gui/ML/Train_time.png", use_container_width=True)
+                st.image("./images/images_gui/ML/Train_memory.png", use_container_width=True)
     else:
         st.write("Click the button in the sidebar to load the dataset.")
 
@@ -310,8 +310,8 @@ with tab2:
 
         st.pyplot(fig)
 
-        st.image("../../images/images_gui/ML/SVM_Tuning_Accuracy.png", caption="Distribution by Hypertension")
-        st.image("../../images/images_gui/ML/SVM_Tuning_Cluster.png", caption="Distribution by Hypertension", use_container_width=True)
+        st.image("./images/images_gui/ML/SVM_Tuning_Accuracy.png", caption="Distribution by Hypertension")
+        st.image("./images/images_gui/ML/SVM_Tuning_Cluster.png", caption="Distribution by Hypertension", use_container_width=True)
     else:
         st.write("Please load the dataset in Machine Learning Tab to perform hyperparameter tuning.")
 
@@ -427,7 +427,7 @@ with tab3:
             st.subheader("Model Comparison After PCA")
             accuracy_df = pd.DataFrame.from_dict(accuracy_dict_pca, orient='index', columns=["Accuracy"]).sort_values(by="Accuracy", ascending=False)
             st.bar_chart(accuracy_df)
-            st.image("../../images/images_gui/ML/PCA_accuracy.png")
+            st.image("./images/images_gui/ML/PCA_accuracy.png")
         else:
             st.error("No numerical features available in the dataset.")
     else:

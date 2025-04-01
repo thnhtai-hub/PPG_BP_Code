@@ -24,8 +24,8 @@ st.write("""
 if st.button("Show Data"):
     # Display images
     try:
-        st.image("../../images/images_gui/Intro/death_cause_vn.png", caption="Top Causes of Death in Vietnam")
-        st.image("../../images/images_gui/Intro/world.png", caption="Top Causes of Death Globally")
+        st.image("./images/images_gui/Intro/death_cause_vn.png", caption="Top Causes of Death in Vietnam")
+        st.image("./images/images_gui/Intro/world.png", caption="Top Causes of Death Globally")
 
         st.write('**Hypertension** is the main cause!')
         st.write('-> Reduce **Hypertension** might reduce mortality.')

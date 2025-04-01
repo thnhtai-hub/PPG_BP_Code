@@ -8,7 +8,7 @@ from sklearn.metrics import classification_report
 
 # Đường dẫn model và file dữ liệu
 model_path = r"C:\PPG_BP_Code\save_models\MLP_model.keras"
-PPG_file = r"../../dataset/raw/PPG-BP dataset.xlsx"
+PPG_file = r"./dataset/raw/PPG-BP dataset.xlsx"
 
 # Tiêu đề ứng dụng
 st.title("MLP Model Hyperparameters, Loss & Accuracy")
@@ -103,8 +103,8 @@ if st.session_state.predict_clicked:
         st.table(report_df.style.format({"precision": "{:.2f}", "recall": "{:.2f}", "f1-score": "{:.2f}", "support": "{:.0f}"}))
 
         # Hiển thị hình ảnh
-        st.image('../../images/images_gui/DL/MLP_accuracy.png', caption="Training and Validation Accuracy")
-        st.image('../../images/images_gui/DL/MLP_lost.png', caption="Training and Validation Loss")
+        st.image('./images/images_gui/DL/MLP_accuracy.png', caption="Training and Validation Accuracy")
+        st.image('./images/images_gui/DL/MLP_lost.png', caption="Training and Validation Loss")
 
     except Exception as e:
         st.error(f"Error during prediction: {e}")
